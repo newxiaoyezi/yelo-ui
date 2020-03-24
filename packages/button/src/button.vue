@@ -1,0 +1,54 @@
+<template>
+  <div class="zbutton">
+    <el-button @click="click" :type="type" :style='{"width":width,"height":height,"font-size":fontSize,"color": color, "border": type===""?("1px solid "+color):""}'>
+      <slot></slot>
+    </el-button>
+  </div>
+</template>
+
+<script>
+import Vue from 'vue'
+import { Button } from 'element-ui'
+Vue.use(Button);
+
+export default {
+  name: 'yeloButton',
+  props: {
+    width: {
+      type: String,
+      default: ''
+    },
+    height: {
+      type: String,
+      default: ''
+    },
+    fontSize: {
+      type: String,
+      default: '16px'
+    },
+    color: {
+      type: String,
+      default: 'white'
+    },
+    type: {
+      type: String,
+      default: 'primary'
+    },
+    click: {
+      type: Function,
+      default: ()=>{}
+    }
+  }
+}
+</script>
+
+<style >
+.zbutton .el-button {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+}
+</style>
