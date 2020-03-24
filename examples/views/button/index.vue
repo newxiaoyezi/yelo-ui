@@ -1,5 +1,5 @@
 <template>
     <div>
-        button
+        <yelo-button>按钮</yelo-button>
     </div>
 </template>

@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Button from '../views/button/index.vue'
+import Dialog from '../views/dialog/index.vue'
 
 Vue.use(VueRouter)
 
@@ -14,6 +15,10 @@ const routes = [
       path: '/button',
       name: 'Button',
       component: Button,
+    },{
+      path: '/dialog',
+      name: 'Dialog',
+      component: Dialog,
     }]
   },
   {

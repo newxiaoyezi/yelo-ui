@@ -1,8 +1,9 @@
 <template>
   <div class="home">
     <ul class="left-menu">
-      <li @click="changeRouter('Button')">按钮 yelo-button</li>
-      <li>对话框 yelo-dialog</li>
+      <li v-for="item in routerList" :key="item.name" @click="changeRouter(item.pathName)">
+        {{item.name}}
+      </li>
     </ul>
     <div class="right-content">
       <router-view></router-view>
@@ -11,18 +12,18 @@
 </template>
 
 <script>
-// @ is an alias to /examples
+import routerList from "../assets/comm/routerLink";
 export default {
   name: "Home",
   data() {
     return {
-
+      routerList: routerList,
     }
   },
   methods: {
     changeRouter(pathName) {
       this.$router.push({name: pathName});
-    }
+    },
   },
   components: {},
 };
@@ -42,6 +43,9 @@ export default {
       color: #333;
       cursor: pointer;
     }
+  }
+  .right-content {
+    padding: 16px 20px;
   }
 }
 </style>
