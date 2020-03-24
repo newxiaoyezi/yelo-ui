@@ -1,7 +1,12 @@
 <template>
   <div class="home">
     <ul class="left-menu">
-      <li v-for="item in routerList" :key="item.name" @click="changeRouter(item.pathName)">
+      <li 
+        v-for="item in routerList" 
+        :key="item.name" 
+        @click="changeRouter(item.pathName)"
+        :style="activeName === item.pathName ? 'color: #409efe' : ''"
+      >
         {{item.name}}
       </li>
     </ul>
@@ -18,10 +23,12 @@ export default {
   data() {
     return {
       routerList: routerList,
+      activeName: "",
     }
   },
   methods: {
     changeRouter(pathName) {
+      this.activeName = pathName;
       this.$router.push({name: pathName});
     },
   },
@@ -46,6 +53,7 @@ export default {
   }
   .right-content {
     padding: 16px 20px;
+    width: calc(100% - 240px);
   }
 }
 </style>
