@@ -1,4 +1,5 @@
 # yelo-ui
+# 为了更符合开发时的业务需求，对element-ui进行二次封装
 
 ## Project setup
 ```
@@ -13,16 +14,6 @@ npm run serve
 ### Compiles and minifies for production
 ```
 npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
 ```
 
 ### Customize configuration

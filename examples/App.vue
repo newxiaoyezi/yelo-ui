@@ -2,7 +2,7 @@
   <div id="app">
     <h3>yelo-ui  乐橘组件库</h3>
     <div id="nav">
-      <router-link to="/">示例</router-link> |
+      <router-link to="/home">示例</router-link> |
       <router-link to="/about">说明</router-link>
     </div>
     <router-view/>
