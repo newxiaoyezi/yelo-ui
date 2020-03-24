@@ -10,6 +10,7 @@
         {{item.name}}
       </li>
     </ul>
+    <div style="height: 100%; width: 1px; background: #409efe"></div>
     <div class="right-content">
       <router-view></router-view>
     </div>
@@ -38,7 +39,7 @@ export default {
 
 <style lang="scss" scoped>
 .home {
-  height: calc(100% - 117px);
+  height: 100%;
   display: flex;
   .left-menu {
     width: 200px;
@@ -53,7 +54,7 @@ export default {
   }
   .right-content {
     padding: 16px 20px;
-    width: calc(100% - 240px);
+    width: calc(100% - 280px);
   }
 }
 </style>

@@ -2,37 +2,21 @@
     <div class="yelo_button">
         <yelo-button>按钮</yelo-button>
 
-        <h4>参数列表</h4>
-        <table>
-            <th>
-                <td>参数名</td>
-                <td>描述</td>
-                <td>默认值</td>
-            </th>
-            <div v-for="item in paramsList" :key="item.paramTitle">
-                <tr class="title">
-                    <td colspan="3">{{item.paramTitle}}</td>
-                </tr>
-                <tr v-for="paramItem in item.params" :key="paramItem.paramName">
-                    <td>{{paramItem.paramName}}</td>
-                    <td>{{paramItem.describe}}</td>
-                    <td>{{paramItem.value}}</td>
-                </tr>
-            </div>
-        </table>
+        <param-table :paramsList="paramsList"></param-table>
     </div>
 </template>
 <script>
+import paramTable from "../../components/paramTable";
 export default {
     data() {
         return {
             paramsList: [{
                 paramTitle: "样式",
                 params: [
-                    {paramName: "padding", describe: "内边距", value: ""},
+                    {paramName: "padding", describe: "内边距", value: "5px 8px"},
                     {paramName: "width", describe: "宽度", value: ""},
                     {paramName: "height", describe: "高度", value: ""},
-                    {paramName: "fontSize", describe: "字体大小", value: ""},
+                    {paramName: "fontSize", describe: "字体大小", value: "16px"},
                     {paramName: "color", describe: "字体颜色", value: "white"},
                     {paramName: "type", describe: "类型，与原element一致", value: "primary"},
                 ]
@@ -43,6 +27,9 @@ export default {
                 ]
             }]
         }
+    },
+    components: {
+        paramTable,
     }
 }
 </script>
@@ -58,7 +45,7 @@ export default {
             border: 1px solid #cad9ea;
             color: #666;
             line-height: 30px;
-            width: 250px;
+            width: 300px;
             height: 30px;
             padding-left: 10px;
         }
