@@ -30,8 +30,8 @@
 </template>
 
 <script type="text/ecmascript-6">
-import Vue from 'vue'
-import { Dialog,Button } from 'element-ui'
+import Vue from "vue";
+import { Dialog, Button } from "element-ui";
 import yeloButton from "../../button/src/button.vue";
 Vue.use(Dialog);
 Vue.use(Button);
@@ -89,8 +89,7 @@ export default {
       visible: this.dialogVisible
     };
   },
-  mounted() {
-  },
+  mounted() {},
   methods: {
     handleClose() {
       this.$emit("handleClose", false);

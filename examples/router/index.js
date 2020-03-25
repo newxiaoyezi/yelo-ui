@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Button from '../views/button/index.vue'
 import Dialog from '../views/dialog/index.vue'
+import Input from '../views/input/index.vue'
+import Caslendar from '../views/caslendar/index.vue'
 
 Vue.use(VueRouter)
 
@@ -19,6 +21,14 @@ const routes = [
       path: '/dialog',
       name: 'Dialog',
       component: Dialog,
+    },{
+      path: '/input',
+      name: 'Input',
+      component: Input,
+    },{
+      path: '/caslendar',
+      name: 'Caslendar',
+      component: Caslendar,
     }]
   },
   {
