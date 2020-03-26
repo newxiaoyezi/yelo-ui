@@ -43,7 +43,6 @@ export default {
                     {paramName: "reqPromise", describe: "远程搜索方法，searchAble为true传入", value: ''},
                     {paramName: "axiosDataAble", describe: "是否从接口只获取一页的数据", value: false},
                     {paramName: "totalNum", describe: "数据总量，axiosDataAble为true传入", value: 0},
-
                 ]
             }, {
                 paramTitle:"事件",

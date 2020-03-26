@@ -11,30 +11,38 @@ export default {
     data() {
         return {
             menuList:[{
-                title: "菜单1",
-                icon: "",
+                title: "菜单 1",
+                icon: "1",
                 component: "",
                 data: "",
                 children: [
                     {
-                        title: "菜单1-1",
+                        title: "菜单 1-1",
                         icon: "",
                         component: "",
                         data: "",
+                        children: []
                     },
                     {
-                        title: "菜单1-2",
+                        title: "菜单 1-2",
                         icon: "",
                         component: "",
                         data: "",
+                        children: []
                     },
                 ]
             },{
-                title: "菜单2",
-                icon: "",
+                title: "菜单 2",
+                icon: "2",
                 component: "",
                 data: "",
-                children: []
+                children: [{
+                    title: "菜单 2-1",
+                    icon: "",
+                    component: "",
+                    data: "",
+                    children: []
+                },]
             }],
             paramsList: [{
                 paramTitle:"参数",
@@ -50,6 +58,7 @@ export default {
             icon: "",
             component: "",
             data: "",
+            children: []//必填
         }]
     },{
         title: "菜单2",
@@ -58,7 +67,16 @@ export default {
         data: "",
         children: []
     }]`, value: ""},
+                    {paramName: "defaultClick", 
+                    describe: "默认选中的菜单,值格式JSON格式{name:item.title,component:item.component,data:item.data}", 
+                    value: ""}
                 ]
+            },{
+                paramTitle:"时间",
+                params: [
+                    {paramName: "handleClose", describe: "打开菜单触发", value: ""},
+                    {paramName: "handleOpen", describe: "关闭菜单触发", value: ""}
+                ],
             }]
         }
     },
