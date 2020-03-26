@@ -16,7 +16,13 @@ const routerList = [
         comName: "yelo-input",
         pathName: "Input",
     },{
-
+        name: "菜单",
+        comName: "yelo-menu",
+        pathName: "Menu"
+    },{
+        name: "下拉框",
+        comName: "yelo-select",
+        pathName: "Select"
     }
 ];
 

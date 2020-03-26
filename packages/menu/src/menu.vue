@@ -41,7 +41,7 @@
 
 
 <template>
-
+  <el-menu>
   <div class="navMenu">
 
     <label v-for="(item,index) in menu" :key="index">
@@ -54,19 +54,24 @@
 
         </template>
 
-        <yeloMenu :menu='item.children'></yeloMenu>
+        <!-- <yeloMenu :menu='item.children'></yeloMenu> -->
       </el-submenu>
 
     </label>
   </div>
+  </el-menu>
 </template>
 
 <script>
 import Vue from 'vue'
 import { Menu,MenuItem,Submenu } from 'element-ui'
-Vue.use(Menu);
-Vue.use(MenuItem);
+// 组件嵌套循环调用 需要异步调用
+// 此处引用有问题，待解决 TAT 
+// Vue.component(Submenu.name, Submenu);
+// Vue.component(MenuItem.name, MenuItem);
 Vue.use(Submenu);
+Vue.use(MenuItem);
+Vue.use(Menu); 
 
 export default {
   name: 'yeloMenu',
@@ -74,7 +79,9 @@ export default {
   data() {
     return {}
   },
-  methods: {}
+  methods: {},
+  components: {
+  }
 }
 </script>
 

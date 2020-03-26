@@ -4,7 +4,6 @@ import router from './router'
 import store from './store'
 import yeloUI from './../packages'
 
-
 Vue.use(yeloUI);
 
 Vue.config.productionTip = false

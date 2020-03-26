@@ -8,6 +8,7 @@
     :remote="searchAble"
     :remote-method="remoteMethod"
     @focus="remoteMethod"
+    :popper-append-to-body="false"
   >
     <el-option
       v-for="item in currentOptions"
@@ -19,14 +20,14 @@
       <el-button type="text" :disabled="currentPage===1" @click="clickPageChange(1)">
         <i class="el-icon-d-arrow-left"></i>
       </el-button>
-      <el-button type="text" :disabled="currentPage===1" @click="clickPageChange(1)" class="btn">
+      <el-button type="text" :disabled="currentPage===1" @click="clickPageChange(currentPage-1)" class="btn">
         <i class="el-icon-arrow-left"></i>
       </el-button>
       <span>{{currentPage}} / {{totalPage}}</span>
-      <el-button type="text" :disabled="currentPage===totalPage" @click="clickPageChange(1)">
+      <el-button type="text" :disabled="currentPage===totalPage" @click="clickPageChange(currentPage+1)">
         <i class="el-icon-arrow-right"></i>
       </el-button>
-      <el-button type="text" :disabled="currentPage===totalPage" @click="clickPageChange(1)" class="btn">
+      <el-button type="text" :disabled="currentPage===totalPage" @click="clickPageChange(totalPage)" class="btn">
         <i class="el-icon-d-arrow-right"></i>
       </el-button>
     </div>
@@ -50,10 +51,15 @@ export default {
       type: String,
       default: ""
     },
-    value: null,//v-model可传入有value属性的对象，也可直接传入value，返回options中选中的一个对象
+    value: {//v-model可传入有value属性的对象，也可直接传入value，返回options中选中的一个对象
+      type: String | Object,
+      default: ""
+    },
     options: {
       type: Array,
-      default: []
+      default: () => {
+        return [];
+      }
     },
     pageShow: {
       //是否显示分页
@@ -84,7 +90,10 @@ export default {
       default: 0
     },
     
-    pageChange: Function,//页数变化时调用
+    pageChange: {//页数变化时调用
+      type: Function,
+      default: () => {}
+    },
   },
   model: {
     prop: "value",
@@ -131,26 +140,10 @@ export default {
     clickPageChange(page) {
       this.currentPage = page;
     },
-    pageToStart() {
-      //第一页
-      this.currentPage = 1;
-    },
-    pageToEnd() {
-      //最后一页
-      this.currentPage = this.totalPage;
-    },
-    pageToPrev() {
-      //前一页
-      this.currentPage--;
-    },
-    pageToNext() {
-      //后一页
-      this.currentPage++;
-    },
     showOptions(page) {
       //页数改变
       this.pageChange(page);//触发父组件页数变化方法
-      if (this.axiosDataAble) {//从后端获取分页数据
+      if (this.axiosDataAble || !this.pageShow) {//从后端获取分页数据
         this.currentOptions = this.totalOptions;
       }else {//直接获取全部数据时自己分页
         this.currentOptions = this.totalOptions.slice(

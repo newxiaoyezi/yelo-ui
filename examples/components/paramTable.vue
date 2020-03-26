@@ -4,7 +4,7 @@
         <table>
             <th>
                 <td>参数名</td>
-                <td>描述</td>
+                <td style="width: 400px;">描述</td>
                 <td>默认值</td>
             </th>
             <div v-for="item in paramsList" :key="item.paramTitle">
@@ -13,7 +13,7 @@
                 </tr>
                 <tr v-for="paramItem in item.params" :key="paramItem.paramName">
                     <td>{{paramItem.paramName}}</td>
-                    <td>{{paramItem.describe}}</td>
+                    <td style="width: 400px;">{{paramItem.describe}}</td>
                     <td>{{paramItem.value}}</td>
                 </tr>
             </div>
@@ -41,9 +41,9 @@ export default {
         }
         td {
             border: 1px solid #cad9ea;
-            color: #666;
+            color: #333;
             line-height: 30px;
-            width: 300px;
+            width: 200px;
             height: 30px;
             padding-left: 10px;
             white-space: pre-wrap;
