@@ -48,7 +48,7 @@ export default {
             ],
             paramsList: [
                 {
-                    paramTitle: "参数",
+                    paramTitle: "样式",
                     params: [
                         {paramName: "minWidth", describe: "表格最小宽度", value: ""},
                     ]
