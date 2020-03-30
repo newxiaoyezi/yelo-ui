@@ -4,7 +4,7 @@
       :disabled="disabled"
       class="avatar-uploader"
       :headers="headers"
-      :action="$axios.uploadFileImageLogistics()"
+      :action="uploadAction"
       :show-file-list="false"
       :on-error="onerror"
       :on-success="handleAvatarSuccess"
@@ -65,11 +65,11 @@ export default {
     showClose: {
       type: Boolean,
       default: true
+    },
+    uploadAction:{
+      type:String,
+      default: ''
     }
-    // uploadUrl:{
-    //   type:String,
-    //   default:this.$axios.uploadFileImage()
-    // }
   },
   data() {
     return {

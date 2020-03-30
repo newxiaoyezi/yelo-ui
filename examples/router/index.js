@@ -11,6 +11,8 @@ import Table from '../views/table/index.vue'
 import TableComm from '../views/table-comm/index.vue'
 import Textarea from '../views/textarea/index.vue'
 import Tree from '../views/tree/index.vue'
+import Upload from '../views/upload/index.vue'
+import UploadMutiple from '../views/upload-multiple/index.vue'
 
 Vue.use(VueRouter)
 
@@ -59,6 +61,14 @@ const routes = [
       path: '/tree',
       name: 'Tree',
       component: Tree,
+    }, {
+      path: '/upload',
+      name: 'Upload',
+      component: Upload,
+    }, {
+      path: '/uploadMutiple',
+      name: 'UploadMutiple',
+      component: UploadMutiple,
     }]
   },
   {

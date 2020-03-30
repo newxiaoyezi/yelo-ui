@@ -3,9 +3,11 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import yeloUI from './../packages'
+import axios from 'axios'
 
 Vue.use(yeloUI);
 
+Vue.prototype.$axios = axios;
 Vue.config.productionTip = false
 
 new Vue({

@@ -13,7 +13,6 @@ import textarea from './textarea'
 import tree from './tree'
 import upload from './upload'
 import uploadMutiple from './upload-mutiple'
-import wrapper from './wrapper'
 
 // 存储组件列表
 const components = [
@@ -31,7 +30,6 @@ const components = [
     tree,
     upload,
     uploadMutiple,
-    wrapper
 ]
 
 // 定义 install 方法，接收 Vue 作为参数。如果使用 use 注册插件，则所有的组件都将被注册
@@ -65,5 +63,4 @@ export default {
   tree,
   upload,
   uploadMutiple,
-  wrapper
 }

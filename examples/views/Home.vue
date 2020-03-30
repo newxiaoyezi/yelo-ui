@@ -7,7 +7,7 @@
         @click="changeRouter(item.pathName)"
         :style="activeName === item.pathName ? 'color: #409efe' : ''"
       >
-        <div style="width: 125px;">{{item.name}}</div>
+        <div style="width: 130px;">{{item.name}}</div>
         <div>{{item.comName}}</div>
       </li>
     </ul>
@@ -43,7 +43,7 @@ export default {
   height: 100%;
   display: flex;
   .left-menu {
-    width: 260px;
+    width: 290px;
     height: 100%;
     list-style-type: none;
     padding-inline-start: 0px;
@@ -58,7 +58,7 @@ export default {
   }
   .right-content {
     padding: 16px 20px;
-    width: calc(100% - 340px);
+    width: calc(100% - 330px);
     text-align: left;
   }
 }

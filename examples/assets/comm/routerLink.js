@@ -39,6 +39,14 @@ const routerList = [
         name: "树形控件",
         comName: "yelo-tree",
         pathName: "Tree"
+    }, {
+        name: "上传",
+        comName: "yelo-upload",
+        pathName: "Upload"
+    }, {
+        name: "上传多个",
+        comName: "yelo-upload-mutiple",
+        pathName: "UploadMutiple"
     }
 ];
 
