@@ -47,7 +47,8 @@ export default {
             paramsList: [{
                 paramTitle:"参数",
                 params: [
-                    {paramName: "menu", describe: `菜单列表，数组形式
+                    {paramName: "menu", describe: 
+`菜单列表，数组形式
     [{
         title: "菜单1",//菜单名
         icon: "",//名称前icon
@@ -68,7 +69,7 @@ export default {
         children: []
     }]`, value: ""},
                     {paramName: "defaultClick", 
-                    describe: "默认选中的菜单,值格式JSON格式{name:item.title,component:item.component,data:item.data}", 
+                    describe: "默认选中的菜单,值格式JSON格式{name:title,component:component,data:data}", 
                     value: ""}
                 ]
             },{

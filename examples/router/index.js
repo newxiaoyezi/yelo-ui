@@ -7,6 +7,7 @@ import Input from '../views/input/index.vue'
 import Caslendar from '../views/caslendar/index.vue'
 import Menu from '../views/menu/index.vue'
 import Select from '../views/select/index.vue'
+import Table from '../views/table/index.vue'
 
 Vue.use(VueRouter)
 
@@ -39,6 +40,10 @@ const routes = [
       path: '/select',
       name: 'Select',
       component: Select,
+    }, {
+      path: '/table',
+      name: 'Table',
+      component: Table,
     }]
   },
   {
