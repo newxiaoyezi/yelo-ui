@@ -43,7 +43,7 @@ export default {
   height: 100%;
   display: flex;
   .left-menu {
-    width: 240px;
+    width: 260px;
     height: 100%;
     list-style-type: none;
     padding-inline-start: 0px;
@@ -58,7 +58,7 @@ export default {
   }
   .right-content {
     padding: 16px 20px;
-    width: calc(100% - 320px);
+    width: calc(100% - 340px);
     text-align: left;
   }
 }

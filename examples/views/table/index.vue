@@ -5,9 +5,6 @@
             :columns="columns" 
             column-type="selection"
         ></yelo-table>
-        <div>
-           
-        </div>
         <param-table :paramsList="paramsList" width="250px"></param-table>
     </div>
 </template>

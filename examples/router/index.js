@@ -8,6 +8,7 @@ import Caslendar from '../views/caslendar/index.vue'
 import Menu from '../views/menu/index.vue'
 import Select from '../views/select/index.vue'
 import Table from '../views/table/index.vue'
+import TableComm from '../views/table-comm/index.vue'
 
 Vue.use(VueRouter)
 
@@ -44,6 +45,10 @@ const routes = [
       path: '/table',
       name: 'Table',
       component: Table,
+    }, {
+      path: '/tableComm',
+      name: 'TableComm',
+      component: TableComm,
     }]
   },
   {

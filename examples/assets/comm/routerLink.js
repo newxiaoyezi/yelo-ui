@@ -27,6 +27,10 @@ const routerList = [
         name: "复杂表格",
         comName: "yelo-table",
         pathName: "Table"
+    }, {
+        name: "表格",
+        comName: "yelo-table-comm",
+        pathName: "TableComm"
     }
 ];
 

@@ -1,5 +1,5 @@
 <template>
-  <el-table ref="multipleTable"  :data="tableData"  :header-cell-style="getRowClass" tooltip-effect="dark" height='100%' style="width: 100%;min-width:970px">
+  <el-table ref="multipleTable"  :data="tableData"  :header-cell-style="getRowClass" tooltip-effect="dark" height='100%' :style="{'width': '100%','min-width':minWidth}">
 
     <el-table-column v-if="isIndex" fixed="left" align="center" type="index" width="55">
 
@@ -29,6 +29,10 @@ Vue.use(Button);
 export default {
   name: "yeloTableComm",
   props: {
+    minWidth: {
+      type: String,
+      default: ""
+    },
     tableData: {
       type: Array,
       default: []
