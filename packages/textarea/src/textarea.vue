@@ -14,47 +14,53 @@
 </style>
 
 <template>
-
-  <div class='zinput'>
-    <el-input resize="false" type="textarea" :maxlength='maxlength' @change="handleInput" v-model="value" :placeholder="placeholder" :style='{"fontSize":fontSize,"height":height,"width":width}'>
-    </el-input>
+  <div class="zinput">
+    <el-input
+      resize="false"
+      type="textarea"
+      :maxlength="maxlength"
+      @input="handleInput"
+      v-model="value"
+      :placeholder="placeholder"
+      :style='{"fontSize":fontSize,"height":height,"width":width}'
+    ></el-input>
   </div>
 </template>
 <script>
-import Vue from 'vue'
-import { Input } from 'element-ui'
+import Vue from "vue";
+import { Input } from "element-ui";
 Vue.use(Input);
 
 export default {
   name: "yeloTextarea",
   model: {
-    prop: 'inputValue',
-    event: 'changeValue'
+    prop: "inputValue",
+    event: "changeValue"
   },
   props: [
-    'inputValue',
-    'maxlength',
-    'placeholder',
-    'fontSize',
-    'width',
-    'height'
+    "inputValue",
+    "maxlength",
+    "placeholder",
+    "fontSize",
+    "width",
+    "height"
   ],
 
   data() {
     return {
       value: this.inputValue
-    }
+    };
   },
 
   methods: {
     handleInput(event) {
-      this.$emit('changeValue', event)
+      this.$emit("changeValue", event);
     }
   },
   watch: {
     inputValue: function(val) {
-      this.value = val
+      this.value = val;
     }
   }
-}
+};
 </script>

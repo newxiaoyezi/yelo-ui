@@ -31,6 +31,14 @@ const routerList = [
         name: "表格",
         comName: "yelo-table-comm",
         pathName: "TableComm"
+    }, {
+        name: "多行文本输入框",
+        comName: "yelo-textarea",
+        pathName: "Textarea"
+    }, {
+        name: "树形控件",
+        comName: "yelo-tree",
+        pathName: "Tree"
     }
 ];
 

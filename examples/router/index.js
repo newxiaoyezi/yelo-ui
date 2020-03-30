@@ -9,6 +9,8 @@ import Menu from '../views/menu/index.vue'
 import Select from '../views/select/index.vue'
 import Table from '../views/table/index.vue'
 import TableComm from '../views/table-comm/index.vue'
+import Textarea from '../views/textarea/index.vue'
+import Tree from '../views/tree/index.vue'
 
 Vue.use(VueRouter)
 
@@ -49,6 +51,14 @@ const routes = [
       path: '/tableComm',
       name: 'TableComm',
       component: TableComm,
+    }, {
+      path: '/textarea',
+      name: 'Textarea',
+      component: Textarea,
+    }, {
+      path: '/tree',
+      name: 'Tree',
+      component: Tree,
     }]
   },
   {
