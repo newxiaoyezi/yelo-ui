@@ -1,8 +1,17 @@
+/*
+ * @Author: zlf
+ * @Date: 2020-03-03 10:32:14
+ * @LastEditors: zlf
+ * @LastEditTime: 2020-08-20 10:35:56
+ * @Description: 
+ * @FilePath: \yelo-ui\packages\index.js
+ */
 // 导入组件
 import button from './button'
 import caslendar from './caslendar'
 import dialog from './dialog'
 import input from './input'
+import moneyInput from './moneyInput'
 import menu from './menu'
 import notice from './notice'
 import RFIDCodes from './RFIDCodes'
@@ -13,6 +22,7 @@ import textarea from './textarea'
 import tree from './tree'
 import upload from './upload'
 import uploadMutiple from './upload-mutiple'
+import tinymceEditor from './tinymceEditor'
 
 // 存储组件列表
 const components = [
@@ -20,6 +30,7 @@ const components = [
     caslendar,
     dialog,
     input,
+    moneyInput,
     menu,
     notice,
     RFIDCodes,
@@ -30,6 +41,7 @@ const components = [
     tree,
     upload,
     uploadMutiple,
+    tinymceEditor
 ]
 
 // 定义 install 方法，接收 Vue 作为参数。如果使用 use 注册插件，则所有的组件都将被注册
@@ -53,6 +65,7 @@ export default {
   caslendar,
   dialog,
   input,
+  moneyInput,
   menu,
   notice,
   RFIDCodes,
@@ -63,4 +76,5 @@ export default {
   tree,
   upload,
   uploadMutiple,
+  tinymceEditor,
 }

@@ -19,7 +19,7 @@ Vue.use(Input);
 export default {
   name: "yeloInput",
   model: {
-    prop: "zvalue",
+    prop: "value",
     event: "changeValue"
   },
   props: {
