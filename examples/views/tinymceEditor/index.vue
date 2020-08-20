@@ -2,6 +2,7 @@
     <div>
         <yelo-tiny-editor v-model="message" :wordCountNum="wordCountNum"></yelo-tiny-editor>
         <div>编辑器中内容字符长度为{{messageLength}}</div>
+        <div>编辑器中内容图片数量为{{imgCount}}</div>
         <param-table :paramsList="paramsList" width="250px"></param-table>
     </div>
 </template>
@@ -12,6 +13,7 @@ export default {
         return {
             message: "",
             messageLength: 0,
+            imgCount: 0,
             paramsList: [{
                 paramTitle: "参数",
                 params: [
@@ -28,8 +30,9 @@ export default {
         }
     },
     methods: {
-      wordCountNum(count) {
+      wordCountNum(count, imgCount) {
         this.messageLength = count;
+        this.imgCount = imgCount;
       }
     },
     components: {

@@ -238,7 +238,12 @@ export default {
       // 获取当前编辑器内字符长度
       const wordcount = tinymce.activeEditor.plugins.wordcount;
       const countNum = wordcount.body.getCharacterCountWithoutSpaces();
-      this.wordCountNum(countNum);
+
+      // 编辑器中图片数组
+      const imgReg = /<img.*?(?:>|\/>)/gi;
+      const arr = this.myValue.match(imgReg);
+
+      this.wordCountNum(countNum, arr.length);
 
       // console.log(wordcount.body.getWordCount());// 单词长度
       // console.log(wordcount.body.getCharacterCount());// 字符长度
@@ -248,9 +253,6 @@ export default {
       // console.log(wordcount.selection.getCharacterCount());
       // console.log(wordcount.selection.getCharacterCountWithoutSpaces());
 
-      // 编辑器中图片数组
-      // const imgReg = /<img.*?(?:>|\/>)/gi;
-      // const arr = this.myValue.match(imgReg);
     },
   },
   watch: {
