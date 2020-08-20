@@ -68,10 +68,10 @@ export default {
       type: String,
       default: "",
     },
-    limitNumber: {
-      type: Number,
-      default: 0,
-    },
+    // limitNumber: {
+    //   type: Number,
+    //   default: 0,
+    // },
     // wordlimit_callback: {
     //   type: Function,
     //   default: () => {}

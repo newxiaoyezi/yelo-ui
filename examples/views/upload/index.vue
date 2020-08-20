@@ -1,3 +1,11 @@
+<!--
+ * @Author: zlf
+ * @Date: 2020-03-30 15:38:57
+ * @LastEditors: zlf
+ * @LastEditTime: 2020-08-20 14:02:42
+ * @Description: 
+ * @FilePath: \yelo-ui\examples\views\upload\index.vue
+-->
 <template>
     <div>
         <yelo-upload v-model="imageUrl" :uploadAction="uploadAction"></yelo-upload>
@@ -19,7 +27,7 @@ export default {
                 paramTitle: "参数",
                 params: [
                     {paramName: "disabled", describe: "是否禁用", value: "false"},
-                    {paramName: "pdfName", describe: "高度", value: "上传PDF文件的名字"},
+                    {paramName: "pdfName", describe: "上传PDF文件的名字", value: ""},
                     {paramName: "imageUrl", describe: "图片信息", value: 
                 `{
     relativePath: "",

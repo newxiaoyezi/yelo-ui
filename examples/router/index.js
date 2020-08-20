@@ -13,6 +13,7 @@ import Textarea from '../views/textarea/index.vue'
 import Tree from '../views/tree/index.vue'
 import Upload from '../views/upload/index.vue'
 import UploadMutiple from '../views/upload-multiple/index.vue'
+import TinymceEditor from '../views/tinymceEditor/index.vue'
 
 Vue.use(VueRouter)
 
@@ -69,6 +70,10 @@ const routes = [
       path: '/uploadMutiple',
       name: 'UploadMutiple',
       component: UploadMutiple,
+    }, {
+      path: '/tinymceEditor',
+      name: 'TinymceEditor',
+      component: TinymceEditor,
     }]
   },
   {

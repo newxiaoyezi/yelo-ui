@@ -47,7 +47,11 @@ const routerList = [
         name: "上传多个",
         comName: "yelo-upload-mutiple",
         pathName: "UploadMutiple"
-    }
+    }, {
+      name: "富文本编辑器",
+      comName: "yelo-tiny-editor",
+      pathName: "TinymceEditor"
+  }
 ];
 
 export default routerList;
